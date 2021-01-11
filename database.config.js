@@ -5,8 +5,10 @@ const databaseConn = mysql.createConnection({
     password: '',
     database: 'covid'
 });
+
 databaseConn.connect(function (error) {
     if (error) throw error;
     console.log('Success');
 })
+
 module.exports = databaseConn;
