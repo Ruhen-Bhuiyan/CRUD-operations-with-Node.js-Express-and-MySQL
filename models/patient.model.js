@@ -17,7 +17,6 @@ Patient.getAllPatients = (result) => {
         }
     })
 }
-
 Patient.getPatientByID = (id, result) => {
     databaseConn.query('SELECT * FROM patients WHERE id = ?', id, (err, res) => {
         if(err) {
@@ -53,7 +52,6 @@ Patient.updatePatient = (id, patientReqData, result) => {
         }
     })
 }
-
 Patient.deletePatient = (id, result) => {
     databaseConn.query('DELETE FROM patients WHERE id = ?', [id], (err, res) => {
         if (err) {
