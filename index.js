@@ -7,7 +7,6 @@ app.use(bodyParser.json());
 app.get('/', (req, res) => {
 	res.send('Hello World!');
 });
-
 const patientRoutes = require('./routes/patient.route');
 app.use('/api/vi/patient', patientRoutes);
 
