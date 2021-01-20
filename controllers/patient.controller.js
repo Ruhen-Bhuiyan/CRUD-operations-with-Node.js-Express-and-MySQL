@@ -1,5 +1,4 @@
 const PatientModel = require('../models/patient.model');
-
 exports.getPatientList = (req, res) => {
     PatientModel.getAllPatients((err, patients) => {
         console.log('Here');
@@ -9,7 +8,6 @@ exports.getPatientList = (req, res) => {
         res.send(patients);
     })
 }
-
 exports.getPatientByID = (req, res) => {
     PatientModel.getPatientByID(req.params.id, (err, patient) => {
         if (err)
