@@ -9,7 +9,6 @@ app.get('/', (req, res) => {
 });
 const patientRoutes = require('./routes/patient.route');
 app.use('/api/vi/patient', patientRoutes);
-
 app.listen(port, () => {
 	console.log(`Example app listening at ${port}`);
 });
