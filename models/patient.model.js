@@ -5,6 +5,7 @@ var Patient = function(patient){
     this.phone = patient.phone;
     this.number_of_vaccine = patient.number_of_vaccine;
 }
+
 Patient.getAllPatients = (result) => {
     databaseConn.query('SELECT * FROM patients', (err, res) => {
         if (err) {
