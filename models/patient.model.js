@@ -29,6 +29,7 @@ Patient.getPatientByID = (id, result) => {
         }
     })
 }
+
 Patient.createPatient = (patientReqData, result)=>{
     databaseConn.query('INSERT INTO patients SET? ', patientReqData, (err, res) => {
         if (err) {
