@@ -8,6 +8,7 @@ exports.getPatientList = (req, res) => {
         res.send(patients);
     })
 }
+
 exports.getPatientByID = (req, res) => {
     PatientModel.getPatientByID(req.params.id, (err, patient) => {
         if (err)
@@ -17,6 +18,7 @@ exports.getPatientByID = (req, res) => {
 
     })
 }
+
 exports.createNewPatient = (req, res) => {
   
     const patientReqData = new PatientModel(req.body);
